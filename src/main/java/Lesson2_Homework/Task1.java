@@ -20,6 +20,8 @@ System.out.println("10 sm в дюймах "+razmer*2.54);}
 
     if (razmer==25){
  System.out.println("25 inch в сантиметрах "+razmer/2.54);}
-
+ else if (razmer!=10 ||razmer!=25){
+        System.out.println("Условие задачи не выполняються");
+    }
 }
 }
