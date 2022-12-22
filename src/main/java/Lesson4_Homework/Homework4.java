@@ -1,8 +1,6 @@
 package Lesson4_Homework;
 
-import java.util.Scanner;
-
-public class Main {
+public class Homework4 {
 
 
 
