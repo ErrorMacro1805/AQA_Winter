@@ -28,16 +28,3 @@ public class StringChecker {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
