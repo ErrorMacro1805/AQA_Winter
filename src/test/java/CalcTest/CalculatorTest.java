@@ -86,5 +86,4 @@ public class CalculatorTest {
     public static void afterExecutionLog(){
         System.out.println("Execution is done");
     }
-
 }
