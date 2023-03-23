@@ -5,16 +5,14 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 public class WebDriverTest {
 
-    WebDriver driver = WebDriverCash.getDriver();
+    WebDriver driver = WebDriverCash.getDriver("e");
 
     @BeforeAll
     public static void setUp() {
-        WebDriver driver = WebDriverCash.getDriver();
+        WebDriver driver = WebDriverCash.getDriver("e");
         driver.manage().window().maximize();
     }
 
@@ -34,7 +32,7 @@ public class WebDriverTest {
 
         driver.get("https://novaposhta.ua/");
         driver.findElement(By.xpath("//*[@id=\"popup_info\"]/div[1]/i")).click();
-        WebElement searchField = WebDriverCash.getDriver().findElement(By.xpath("//*[@id=\"header\"]/div[2]/form/div/div[2]/input"));
+        WebElement searchField = WebDriverCash.getDriver("e").findElement(By.xpath("//*[@id=\"header\"]/div[2]/form/div/div[2]/input"));
         Assertions.assertTrue(searchField.isDisplayed(), "Search field is not present on the page");
     }
 
@@ -63,7 +61,7 @@ public class WebDriverTest {
 
     @AfterAll
     public static void finishExecution() {
-        WebDriver driver = WebDriverCash.getDriver();
+        WebDriver driver = WebDriverCash.getDriver("e");
         driver.quit();
     }
 }
